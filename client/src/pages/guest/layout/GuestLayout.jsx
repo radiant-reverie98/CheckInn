@@ -1,10 +1,14 @@
 import { Outlet } from "react-router-dom";
 import { AuthProvider } from "../context/AuthContext";
+import { HotelProvider } from "../context/HotelContext"
 
 function GuestLayout(){
     return(
         <AuthProvider>
-            <Outlet/>
+            <HotelProvider>
+                <Outlet/>
+            </HotelProvider>
+            
         </AuthProvider>
     )
 }
