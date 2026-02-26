@@ -4,3 +4,37 @@
 @theme {
   --font-jakarta: "Plus Jakarta Sans", sans-serif;
 }
+
+@keyframes slow-zoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.15); }
+}
+
+@keyframes reveal {
+  0% { transform: translateY(100%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scroll-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.animate-slow-zoom {
+  animation: slow-zoom 20s infinite alternate ease-in-out;
+}
+
+.animate-reveal {
+  animation: reveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scroll-line {
+  animation: scroll-line 2s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom Serif for that high-end look */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400&display=swap');
+
+.font-serif {
+  font-family: 'Bodoni Moda', serif;
+}
