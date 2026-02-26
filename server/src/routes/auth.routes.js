@@ -10,5 +10,5 @@ router.post("/loginOwner",ownerLogin)
 router.post("/logoutOwner",verifyToken,verifyRole('OWNER'),ownerLogout)
 router.post(`/registerGuest`,guestRegister)
 router.get('/checkSession',checkSession)
-router.get('/auth/me',isUser)
+router.get('/auth/me',verifyToken,verifyRole('GUEST'),isUser)
 export default router;

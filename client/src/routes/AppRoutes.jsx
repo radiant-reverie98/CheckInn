@@ -27,6 +27,9 @@ import ReviewSubmit from "../pages/onboarding/steps/ReviewSubmit";
 
 // context
 import { HotelProvider } from "../context/HotelContext";
+import { AuthProvider } from "../pages/guest/context/AuthContext";
+import RegisterGuest from "../pages/guest/Auth/RegisterGuest";
+import GuestLayout from "../pages/guest/layout/GuestLayout";
 
 
 
@@ -35,8 +38,9 @@ function AppRoutes() {
     <Routes>
 
       {/* guest */}
-      
-      
+      <Route element={<GuestLayout/>}>
+        <Route path="/guest/register" element={<RegisterGuest/>}/>
+      </Route>
 
       {/* owner public */}
       <Route path="/owner" element={<OwnersLandingPage />} />
