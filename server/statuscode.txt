@@ -1,0 +1,6 @@
+422 - Indicates that the server understands the content type and the syntax of the request is correct, but it cannot process the request due to semantic errors or validation failures in the data provided
+
+403 - the server understood the request but refuses to authorize it
+
+Stream - In programming, a Stream is a way to handle data—like a file, a video, or an HTTP request—by breaking it into small, manageable chunks and processing them one by one, rather than loading the entire thing into memory at once.
+
