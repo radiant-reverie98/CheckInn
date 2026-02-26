@@ -23,19 +23,11 @@ import PhotosUpload from "../pages/onboarding/steps/PhotosUpload";
 import ReviewSubmit from "../pages/onboarding/steps/ReviewSubmit";
 
 // guest
-import Guest from "../pages/landing-page/Guest";
-import LandingPageContent from "../pages/guests/LandingPageContent";
-import HotelDetails from "../pages/guests/HotelDetails";
-import MyBookingsPage from "../pages/guests/MyBookingsPage";
+
 
 // context
 import { HotelProvider } from "../context/HotelContext";
-// import { GuestProvider } from "../context/GuestContext";
-import GuestRegister from "../pages/auth/GuestRegister";
-import GuestLogin from "../pages/auth/GuestLogin";
-import CheckOut from "../pages/guests/CheckOut";
-import BookingDetails from "../pages/guests/BookingDetails";
-import ChatPage from "../pages/guests/ChatPage";
+
 
 
 function AppRoutes() {
@@ -43,17 +35,7 @@ function AppRoutes() {
     <Routes>
 
       {/* guest */}
-      <Route path = "/guest/register" element={<GuestRegister/>}/>
-      <Route path = "/guest/login" element={<GuestLogin/>}/>
-      <Route path="checkout/:id" element={<CheckOut/>}/>
-      <Route path="/" element={<Guest />}>
       
-        <Route index element={<LandingPageContent />} />
-        </Route>
-        <Route path="hotel/:id" element={<HotelDetails />} />
-        <Route path="my-bookings" element={<MyBookingsPage />} />
-        <Route path="booking-details" element={<BookingDetails/>}/>
-        <Route path="chat-page" element={<ChatPage/>}/>
       
 
       {/* owner public */}

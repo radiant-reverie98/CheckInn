@@ -485,3 +485,26 @@ export const checkSession = async(req,res) => {
     })
   }
 }
+
+
+export const isUser = async (req, res) => {
+  try {
+    if (req.user && req.user.role === "GUEST") {
+      return res.status(200).json({
+        success: true,
+      });
+    }
+
+    return res.status(403).json({
+      success: false,
+      message: "Unauthorized access",
+    });
+
+  } catch (err) {
+    console.log(`GUEST ERR: ${err.message}`);
+    return res.status(500).json({
+      success: false,
+      message: "Internal server error",
+    });
+  }
+};
