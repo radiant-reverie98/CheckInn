@@ -27,7 +27,7 @@ const RegisterGuest = () => {
     }catch(err){
         console.log(err)
         if(err.response){
-            alert(err.response.message)
+            alert(err.response.data.message)
         }
     }finally{setLoading(false)}
   };
@@ -145,7 +145,7 @@ const RegisterGuest = () => {
           <div className="text-center">
             <p className="text-sm text-slate-400 font-medium">
               Already have an account?{' '}
-              <Link to="/login" className="text-blue-600 font-bold hover:underline transition-all underline-offset-4">
+              <Link to="/guest/login" className="text-blue-600 font-bold hover:underline transition-all underline-offset-4">
                 Sign In
               </Link>
             </p>

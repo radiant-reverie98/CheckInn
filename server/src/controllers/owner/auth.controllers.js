@@ -150,7 +150,7 @@ export const guestLogin = async (req, res) => {
        if(!isGuest){
         return res.status(401).json({
             success: false,
-            message: "Authentication failed."
+            message: "Register to begin your travelling journey"
         })
 
        }

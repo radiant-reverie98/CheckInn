@@ -30,6 +30,7 @@ import { HotelProvider } from "../context/HotelContext";
 import { AuthProvider } from "../pages/guest/context/AuthContext";
 import RegisterGuest from "../pages/guest/Auth/RegisterGuest";
 import GuestLayout from "../pages/guest/layout/GuestLayout";
+import LoginGuest from "../pages/guest/Auth/LoginGuest";
 
 
 
@@ -40,6 +41,7 @@ function AppRoutes() {
       {/* guest */}
       <Route element={<GuestLayout/>}>
         <Route path="/guest/register" element={<RegisterGuest/>}/>
+        <Route path="/guest/login" element={<LoginGuest/>}/>
       </Route>
 
       {/* owner public */}
